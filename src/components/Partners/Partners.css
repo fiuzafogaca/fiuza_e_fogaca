@@ -1,0 +1,147 @@
+.partners {
+  width: 100%;
+  padding-block: var(--space-xl);
+  background: var(--color-surface-lowest);
+}
+
+.partners__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.partners__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gutter);
+}
+
+/* ---------- Card ---------- */
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-low);
+  box-shadow: var(--shadow-xl);
+}
+
+.partner-card__photo {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  background: var(--color-surface-highest);
+}
+
+.partner-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  filter: grayscale(100%);
+  transition: transform 500ms;
+}
+
+.partner-card:hover .partner-card__image {
+  transform: scale(1.05);
+}
+
+/* Degradê só aparece no mobile, quando a foto fica acima do texto */
+.partner-card__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 16, 13, 0.8), transparent);
+}
+
+.partner-card__info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-lg);
+}
+
+.partner-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.partner-card__oab {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius);
+  background: var(--color-surface-highest);
+  color: var(--color-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.partner-card__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-on-surface-variant);
+}
+
+.partner-card__link {
+  display: inline-flex;
+  transition: color var(--transition-fast);
+}
+
+.partner-card__link:hover {
+  color: var(--color-secondary);
+}
+
+.partner-card__name {
+  margin-top: var(--space-xs);
+  color: var(--color-on-surface);
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.partner-card__role {
+  color: var(--color-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.partner-card__bio {
+  padding-top: var(--space-xs);
+  color: var(--color-on-surface-variant);
+}
+
+@media (min-width: 768px) {
+  .partner-card {
+    flex-direction: row;
+  }
+
+  .partner-card__photo {
+    width: calc(5 / 12 * 100%);
+    height: auto;
+  }
+
+  .partner-card__shade {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .partners {
+    padding-block: 7rem;
+  }
+
+  .partners__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

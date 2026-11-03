@@ -1,0 +1,38 @@
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  font-family: 'Material Symbols Outlined';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+.icon--16 {
+  font-size: 16px;
+}
+
+.icon--18 {
+  font-size: 18px;
+}
+
+.icon--20 {
+  font-size: 20px;
+}
+
+.icon--22 {
+  font-size: 22px;
+}
+
+.icon--28 {
+  font-size: 28px;
+}

@@ -1,0 +1,182 @@
+.practice-areas {
+  width: 100%;
+  padding-block: var(--space-xl);
+  background: var(--color-surface);
+}
+
+.practice-areas__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.practice-areas__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gutter);
+  align-items: start;
+}
+
+/* ---------- Card ---------- */
+
+.area-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-lg);
+  border: 1px solid transparent;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-container);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  user-select: none;
+  transition: all var(--transition-base);
+}
+
+.area-card:hover {
+  border-color: rgba(224, 194, 152, 0.2);
+  background: var(--color-surface-high);
+  box-shadow: var(--shadow-xl);
+}
+
+.area-card--expanded,
+.area-card--expanded:hover {
+  background: var(--color-surface-high);
+  box-shadow: 0 0 0 1px rgba(224, 194, 152, 0.4), var(--shadow-xl);
+}
+
+.area-card__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.area-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.area-card__tag {
+  color: var(--color-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+}
+
+.area-card__icons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.area-card__icon {
+  color: rgba(224, 194, 152, 0.6);
+  transition: color var(--transition-base);
+}
+
+.area-card:hover .area-card__icon {
+  color: var(--color-secondary);
+}
+
+.area-card__indicator {
+  color: rgba(224, 194, 152, 0.7);
+  transition: transform var(--transition-base);
+}
+
+.area-card--expanded .area-card__indicator {
+  transform: rotate(45deg);
+}
+
+.area-card__title {
+  color: var(--color-on-surface);
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+/* Abre e fecha animando de 0fr para 1fr */
+.area-card__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--transition-base) ease-in-out;
+}
+
+.area-card--expanded .area-card__body {
+  grid-template-rows: 1fr;
+}
+
+.area-card__body-inner {
+  overflow: hidden;
+  visibility: hidden;
+  transition: visibility 0s var(--transition-base);
+}
+
+.area-card--expanded .area-card__body-inner {
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.area-card__text {
+  padding-top: var(--space-sm);
+  color: var(--color-on-surface-variant);
+}
+
+.area-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-md);
+}
+
+.area-card__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color var(--transition-base);
+}
+
+.area-card__toggle:hover {
+  color: var(--color-secondary-fixed);
+}
+
+.area-card__arrow {
+  transition: transform var(--transition-base);
+}
+
+.area-card:hover .area-card__arrow {
+  transform: translateX(0.25rem);
+}
+
+.area-card--expanded .area-card__arrow,
+.area-card--expanded:hover .area-card__arrow {
+  transform: rotate(-90deg);
+}
+
+@media (min-width: 768px) {
+  .practice-areas__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .practice-areas {
+    padding-block: 7rem;
+  }
+
+  .practice-areas__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

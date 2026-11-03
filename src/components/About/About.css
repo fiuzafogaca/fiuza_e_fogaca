@@ -1,0 +1,65 @@
+.about {
+  width: 100%;
+  padding-block: var(--space-xl);
+  background: var(--color-paper);
+  color: var(--color-paper-text);
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.about__title {
+  color: var(--color-secondary-container);
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  color: rgba(40, 51, 47, 0.85);
+}
+
+.about__strong {
+  color: var(--color-paper-strong);
+  font-weight: 600;
+}
+
+.about__quote {
+  margin-top: var(--space-sm);
+  padding-left: var(--space-md);
+  border-left: 2px solid var(--color-secondary-container);
+  color: var(--color-secondary-container);
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+}
+
+@media (min-width: 768px) {
+  .about__title {
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: -0.015em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    padding-block: 7rem;
+  }
+
+  /* Coluna de texto ocupa 7 das 12 colunas, como no design original */
+  .about__content {
+    width: calc(7 / 12 * 100%);
+  }
+}

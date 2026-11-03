@@ -1,0 +1,135 @@
+.differentials {
+  width: 100%;
+  padding-block: var(--space-xl);
+  background: var(--color-surface-high);
+}
+
+.differentials__header {
+  margin-bottom: var(--space-xl);
+}
+
+.differentials__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gutter);
+  align-items: start;
+}
+
+/* ---------- Card ---------- */
+
+.differential-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg);
+  border: 1px solid transparent;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-container);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.differential-card:hover {
+  border-color: rgba(224, 194, 152, 0.2);
+  background: rgba(45, 55, 52, 0.8);
+}
+
+.differential-card--expanded,
+.differential-card--expanded:hover {
+  background: rgba(45, 55, 52, 0.9);
+  box-shadow: 0 0 0 1px rgba(224, 194, 152, 0.4), var(--shadow-md);
+}
+
+/* O card inteiro é clicável: o botão se estende por cima da área do cabeçalho */
+.differential-card__trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-sm);
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  user-select: none;
+}
+
+.differential-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.differential-card__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-primary-container);
+  color: var(--color-secondary);
+}
+
+.differential-card__indicator {
+  color: rgba(224, 194, 152, 0.7);
+  transition: transform var(--transition-base);
+}
+
+.differential-card--expanded .differential-card__indicator {
+  transform: rotate(45deg);
+}
+
+.differential-card__title {
+  color: var(--color-on-surface);
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+}
+
+.differential-card__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--transition-base) ease-in-out;
+}
+
+.differential-card--expanded .differential-card__body {
+  grid-template-rows: 1fr;
+}
+
+.differential-card__body-inner {
+  overflow: hidden;
+  visibility: hidden;
+  transition: visibility 0s var(--transition-base);
+}
+
+.differential-card--expanded .differential-card__body-inner {
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.differential-card__text {
+  padding-top: var(--space-sm);
+  color: var(--color-on-surface-variant);
+}
+
+@media (min-width: 768px) {
+  .differentials__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .differentials {
+    padding-block: 6rem;
+  }
+
+  .differentials__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
