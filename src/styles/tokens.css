@@ -34,10 +34,10 @@
   --space-xl: 3.5rem;
   --gutter: 2rem;
   --margin-mobile: 1.25rem;
-  --margin: 4rem;
+  --margin: 2rem;
 
   /* Layout */
-  --container-max: 1380px;
+  --container-max: 1920px;
   --header-height: 80px;
 
   /* Bordas e sombras */

@@ -61,5 +61,6 @@
   /* Coluna de texto ocupa 7 das 12 colunas, como no design original */
   .about__content {
     width: calc(7 / 12 * 100%);
+    max-width: 58rem; /* mantém linhas de texto confortáveis de ler em telas largas */
   }
 }
