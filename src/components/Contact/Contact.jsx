@@ -1,15 +1,15 @@
-import Button from '../Button/Button.jsx';
-import Icon from '../Icon/Icon.jsx';
-import SectionHeader from '../SectionHeader/SectionHeader.jsx';
-import { contactInfo, interestAreas } from '../../data/site.js';
-import './Contact.css';
+import Button from "../Button/Button.jsx";
+import Icon from "../Icon/Icon.jsx";
+import SectionHeader from "../SectionHeader/SectionHeader.jsx";
+import { contactInfo, interestAreas } from "../../data/site.js";
+import "./Contact.css";
 
 export default function Contact() {
-  // ATENÇÃO: por enquanto o formulário só mostra um aviso e limpa os campos.
-  // Para enviar de verdade, troque por uma chamada a uma API, EmailJS, Formspree etc.
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert('Mensagem enviada com sucesso. Nossa equipe entrará em contato prontamente.');
+    alert(
+      "Mensagem enviada com sucesso. Nossa equipe entrará em contato prontamente.",
+    );
     event.currentTarget.reset();
   };
 
@@ -87,7 +87,11 @@ export default function Contact() {
                 <label className="contact-form__label" htmlFor="contact-area">
                   Área de Interesse
                 </label>
-                <select className="contact-form__control" id="contact-area" name="area">
+                <select
+                  className="contact-form__control"
+                  id="contact-area"
+                  name="area"
+                >
                   {interestAreas.map((area) => (
                     <option key={area.value} value={area.value}>
                       {area.label}
@@ -112,10 +116,14 @@ export default function Contact() {
             </div>
 
             <p className="contact-form__privacy">
-              <Icon name="lock" size="16" className="contact-form__privacy-icon" />
+              <Icon
+                name="lock"
+                size="16"
+                className="contact-form__privacy-icon"
+              />
               <span>
-                Seus dados serão tratados com absoluto sigilo, em consonância com a LGPD e o Código
-                de Ética da OAB.
+                Seus dados serão tratados com absoluto sigilo, em consonância
+                com a LGPD e o Código de Ética da OAB.
               </span>
             </p>
 

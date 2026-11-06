@@ -1,13 +1,17 @@
-import Icon from '../Icon/Icon.jsx';
-import SectionHeader from '../SectionHeader/SectionHeader.jsx';
-import { partners } from '../../data/site.js';
-import './Partners.css';
+import Icon from "../Icon/Icon.jsx";
+import SectionHeader from "../SectionHeader/SectionHeader.jsx";
+import { partners } from "../../data/site.js";
+import "./Partners.css";
 
 function PartnerCard({ partner }) {
   return (
     <article className="partner-card">
       <div className="partner-card__photo">
-        <img className="partner-card__image" src={partner.photo} alt={`${partner.name}, ${partner.role}`} />
+        <img
+          className="partner-card__image"
+          src={partner.photo}
+          alt={`${partner.name}, ${partner.role}`}
+        />
         <div className="partner-card__shade" aria-hidden="true" />
       </div>
 
@@ -15,10 +19,20 @@ function PartnerCard({ partner }) {
         <div className="partner-card__top">
           <span className="partner-card__oab">{partner.oab}</span>
           <div className="partner-card__links">
-            <a className="partner-card__link" href="#contato" title="LinkedIn" aria-label={`LinkedIn de ${partner.name}`}>
+            <a
+              className="partner-card__link"
+              href="#contato"
+              title="LinkedIn"
+              aria-label={`LinkedIn de ${partner.name}`}
+            >
               <Icon name="share" size="20" />
             </a>
-            <a className="partner-card__link" href="#contato" title="E-mail" aria-label={`E-mail de ${partner.name}`}>
+            <a
+              className="partner-card__link"
+              href="#contato"
+              title="E-mail"
+              aria-label={`E-mail de ${partner.name}`}
+            >
               <Icon name="mail" size="20" />
             </a>
           </div>
