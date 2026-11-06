@@ -1,3 +1,6 @@
+// Número que recebe as mensagens do formulário (só dígitos: 55 + DDD + número)
+export const WHATSAPP_NUMBER = "5551984324164";
+
 export const FIRM_NAME = "Fiuza & Fogaça Advogados";
 
 const IMAGES = `${import.meta.env.BASE_URL}images/`;
@@ -86,25 +89,37 @@ export const differentials = [
     id: "atendimento",
     icon: "handshake",
     title: "Atendimento Personalizado",
-    text: "Entendemos que decisões empresariais e patrimoniais exigem respostas ágeis e precisão técnica. Por isso, no Fiuza & Fogaça Advogados, a condução do seu caso é realizada diretamente pelos sócios, sem intermediários.",
+    text: [
+      "Entendemos que decisões empresariais e patrimoniais exigem respostas ágeis e precisão técnica. Por isso, no Fiuza & Fogaça Advogados, a condução do seu caso é realizada diretamente pelos sócios, sem intermediários.",
+      "Reconhecemos que cada empresa possui uma dinâmica única. Nosso atendimento é moldado sob medida para se integrar com perfeição à rotina e aos desafios do seu negócio.",
+    ],
   },
   {
-    id: "estrategia",
-    icon: "strategy",
-    title: "Estratégia Jurídica",
-    text: "Abordagem sob medida desenhada especificamente para mitigar riscos ocultos e maximizar a eficiência temporal e econômica das soluções.",
+    id: "nacional",
+    icon: "public",
+    title: "Atuação Nacional",
+    text: [
+      "O Fiuza & Fogaça Advogados atua em todo o território nacional, representando empresas em demandas judiciais e administrativas perante tribunais e órgãos públicos de diferentes esferas.",
+      "Nossa atuação abrange todas as instâncias do Poder Judiciário, incluindo os Tribunais Superiores, além de processos e procedimentos perante órgãos e entidades da Administração Pública. Essa abrangência permite acompanhar demandas em diferentes regiões e níveis de decisão, com estratégia jurídica consistente e atenção às particularidades de cada caso.",
+    ],
   },
   {
     id: "resultados",
     icon: "military_tech",
     title: "Compromisso com Resultados",
-    text: "Dedicação obstinada na defesa dos direitos legítimos e no alcance pragmático dos objetivos negociais estabelecidos pelos clientes.",
+    text: [
+      "Não medimos eficiência por volume de relatórios, mas pelo retorno financeiro e pela segurança criada para o seu negócio. Nossa atuação é orientada para solucionar litígios de forma ágil, recuperar ativos e gerar economia efetiva.",
+      "Para isso, unimos visão estratégica e execução rigorosa na busca pela melhor solução no menor tempo possível. O sucesso das nossas teses é refletido diretamente na tranquilidade e na rentabilidade da sua empresa.",
+    ],
   },
   {
     id: "etica",
     icon: "security",
     title: "Ética e Transparência",
-    text: "Conduta inegociável pautada pela honestidade, sigilo irrestrito e clareza total no fornecimento de diagnósticos e prognósticos processuais.",
+    text: [
+      "Pautamos nossa atuação pela honestidade intelectual: recusamos a lógica de aceitar causas por volume. Só ingressamos em uma demanda após uma avaliação criteriosa que confirme a viabilidade de entregar um resultado efetivo para a sua empresa.",
+      "Construímos relações fundamentadas na lealdade e no sigilo irrestrito. Reconhecemos o valor do patrimônio imaterial do seu negócio e garantimos máxima proteção às informações e estratégias corporativas confiadas ao nosso escritório.",
+    ],
   },
 ];
 

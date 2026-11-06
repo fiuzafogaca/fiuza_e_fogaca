@@ -33,7 +33,11 @@ function DifferentialCard({ item }) {
 
       <div className="differential-card__body">
         <div className="differential-card__body-inner" id={bodyId}>
-          <p className="differential-card__text">{item.text}</p>
+          {item.text.map((paragraph) => (
+            <p key={paragraph} className="differential-card__text">
+              {paragraph}
+            </p>
+          ))}
         </div>
       </div>
     </article>

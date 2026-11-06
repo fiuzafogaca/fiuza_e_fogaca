@@ -1,16 +1,33 @@
 import Button from "../Button/Button.jsx";
 import Icon from "../Icon/Icon.jsx";
 import SectionHeader from "../SectionHeader/SectionHeader.jsx";
-import { contactInfo, interestAreas } from "../../data/site.js";
+import { WHATSAPP_NUMBER, contactInfo, interestAreas } from "../../data/site.js";
 import "./Contact.css";
 
 export default function Contact() {
+  // Monta a mensagem com todos os campos e abre o WhatsApp do escritório.
+  // O cliente ainda precisa apertar "enviar" dentro do WhatsApp.
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(
-      "Mensagem enviada com sucesso. Nossa equipe entrará em contato prontamente.",
-    );
-    event.currentTarget.reset();
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    const area = interestAreas.find((item) => item.value === data.get("area"));
+
+    const message = [
+      "*Novo contato pelo site*",
+      "",
+      `*Nome:* ${data.get("name")}`,
+      `*E-mail:* ${data.get("email")}`,
+      `*Telefone:* ${data.get("phone")}`,
+      `*Área de interesse:* ${area ? area.label : data.get("area")}`,
+      "",
+      "*Mensagem:*",
+      data.get("message"),
+    ].join("\n");
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+    form.reset();
   };
 
   return (

@@ -26,6 +26,8 @@
   height: 2.5rem;
 }
 
+/* ---------- Menu horizontal (desktop) ---------- */
+
 .header__nav {
   display: none;
   align-items: center;
@@ -47,6 +49,75 @@
   color: var(--color-secondary);
 }
 
+/* ---------- Botão hambúrguer ---------- */
+
+.header__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-right: -0.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-on-surface);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.header__toggle:hover {
+  color: var(--color-secondary);
+}
+
+.header__toggle:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* ---------- Painel do menu mobile ----------
+   z-index 70: acima do logo fixo (60), senão o logo cobre os links. */
+
+.mobile-menu {
+  position: fixed;
+  top: var(--header-height);
+  right: 0;
+  left: 0;
+  z-index: 70;
+  display: none;
+  flex-direction: column;
+  padding: var(--space-sm) var(--margin-mobile) var(--space-md);
+  border-bottom: 1px solid rgba(49, 59, 56, 0.3);
+  background: var(--color-surface);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu--open {
+  display: flex;
+}
+
+.mobile-menu__link {
+  padding-block: 0.875rem;
+  border-bottom: 1px solid rgba(49, 59, 56, 0.3);
+  color: var(--color-on-surface-variant);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+
+.mobile-menu__link:last-child {
+  border-bottom: 0;
+}
+
+.mobile-menu__link:hover {
+  color: var(--color-secondary);
+}
+
 @media (min-width: 640px) {
   .header__logo-slot {
     width: 10rem;
@@ -58,10 +129,23 @@
     width: 12rem;
     height: 3rem;
   }
+
+  .header__toggle {
+    margin-right: 0;
+  }
+
+  .mobile-menu {
+    padding-inline: var(--margin);
+  }
 }
 
 @media (min-width: 1024px) {
   .header__nav {
     display: flex;
+  }
+
+  .header__toggle,
+  .mobile-menu {
+    display: none;
   }
 }

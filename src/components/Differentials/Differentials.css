@@ -118,6 +118,10 @@
   color: var(--color-on-surface-variant);
 }
 
+.differential-card__text + .differential-card__text {
+  padding-top: var(--space-md);
+}
+
 @media (min-width: 768px) {
   .differentials__grid {
     grid-template-columns: repeat(2, 1fr);
