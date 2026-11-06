@@ -1,5 +1,10 @@
-import { FIRM_NAME, LOGO_URL, contactInfo, footerLinks } from '../../data/site.js';
-import './Footer.css';
+import {
+  FIRM_NAME,
+  LOGO_URL,
+  contactInfo,
+  footerLinks,
+} from "../../data/site.js";
+import "./Footer.css";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -15,7 +20,10 @@ export default function Footer() {
             </a>
           </div>
 
-          <nav className="footer__column footer__column--links" aria-label="Links rápidos">
+          <nav
+            className="footer__column footer__column--links"
+            aria-label="Links rápidos"
+          >
             <h4 className="footer__heading">Links Rápidos</h4>
             <ul className="footer__list">
               {footerLinks.map((link) => (
@@ -33,7 +41,9 @@ export default function Footer() {
             <div className="footer__contacts">
               {footerContacts.map((item) => (
                 <div key={item.id} className="footer__contact">
-                  <span className="footer__contact-label">{item.shortLabel}</span>
+                  <span className="footer__contact-label">
+                    {item.shortLabel}
+                  </span>
                   <span>{item.value}</span>
                 </div>
               ))}
@@ -42,7 +52,10 @@ export default function Footer() {
         </div>
 
         <div className="footer__bottom">
-          <p>© {year} {FIRM_NAME}. Todos os direitos reservados. OAB/SP.</p>
+          <p>
+            © {year} {FIRM_NAME}. Todos os direitos reservados. OAB/RS sob o n°
+            18.530.
+          </p>
           <p className="footer__tagline">Stewardship &amp; Legal Excellence</p>
         </div>
       </div>

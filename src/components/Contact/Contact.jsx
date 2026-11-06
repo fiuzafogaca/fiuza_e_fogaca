@@ -19,8 +19,8 @@ export default function Contact() {
         <div className="contact__info">
           <SectionHeader
             eyebrow="Canal de Atendimento"
-            title="Agende uma Consulta"
-            lead="Entre em contato para avaliar seu caso com absoluta discrição, sigilo profissional e rigor técnico."
+            title="Fale com um Especialista"
+            lead="Apresente seu caso para uma avaliação inicial conduzida sob estrito sigilo profissional e rigor técnico."
           />
 
           <ul className="contact__list">

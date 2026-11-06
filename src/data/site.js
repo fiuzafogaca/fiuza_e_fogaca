@@ -66,7 +66,7 @@ export const partners = [
   {
     id: "bruno-fiuza",
     name: "Bruno Fiuza",
-    oab: "OAB/SP 000.000",
+    oab: "OAB/RS 137.391",
     role: "Sócio Fundador | Advogado",
     bio: "Advogado, pós-graduado em Direito e Processo Tributário pelo IET, em parceria com a PUC/RS. Atua no contencioso tributário administrativo e judicial, no planejamento tributário de empresas e patrimonial de seus sócios, bem como em questões societárias e fiscais relacionadas ao comércio exterior.",
     photo: `${IMAGES}bruno_fiuza.jpg`,
@@ -74,7 +74,7 @@ export const partners = [
   {
     id: "alexandre-fogaca",
     name: "Alexandre Fogaça",
-    oab: "OAB/SP 000.000",
+    oab: "OAB/RS 140.715",
     role: "Sócio Fundador | Advogado",
     bio: "Advogado especialista em Direito Tributário e pós-graduando na PUC/RS. Atua na gestão e reestruturação de passivos fiscais, especialmente na negociação de dívidas por meio da transação tributária, além do contencioso tributário administrativo e judicial. Sua atuação também abrange questões relacionadas ao Direito Empresarial, Imobiliário e Processual Civil.",
     photo: `${IMAGES}alexandre_fogaca.jpg`,
@@ -86,7 +86,7 @@ export const differentials = [
     id: "atendimento",
     icon: "handshake",
     title: "Atendimento Personalizado",
-    text: "Relação direta e transparente com os sócios em cada etapa do processo ou consultoria, garantindo proximidade e atenção minuciosa.",
+    text: "Entendemos que decisões empresariais e patrimoniais exigem respostas ágeis e precisão técnica. Por isso, no Fiuza & Fogaça Advogados, a condução do seu caso é realizada diretamente pelos sócios, sem intermediários.",
   },
   {
     id: "estrategia",
@@ -128,7 +128,7 @@ export const contactInfo = [
     icon: "mail",
     label: "E-mail Institucional",
     shortLabel: "E-mail",
-    value: "contato@fiuzaefogaca.adv.br",
+    value: "escritorio@fiuzaefogaca.com",
   },
   {
     id: "horario",
@@ -138,7 +138,6 @@ export const contactInfo = [
   },
 ];
 
-// Mantido igual ao design do Stitch. Vale ajustar para as áreas reais do escritório.
 export const interestAreas = [
   { value: "civil", label: "Direito Civil" },
   { value: "empresarial", label: "Direito Empresarial" },
