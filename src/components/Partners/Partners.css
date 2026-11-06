@@ -42,11 +42,12 @@
   object-fit: cover;
   object-position: top;
   filter: grayscale(100%);
-  transition: transform 500ms;
+  transition: transform 500ms, filter 500ms;
 }
 
 .partner-card:hover .partner-card__image {
   transform: scale(1.05);
+  filter: grayscale(0%);
 }
 
 /* Degradê só aparece no mobile, quando a foto fica acima do texto */

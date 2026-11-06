@@ -69,7 +69,7 @@ export const partners = [
     oab: "OAB/SP 000.000",
     role: "Sócio Fundador | Advogado",
     bio: "Advogado, pós-graduado em Direito e Processo Tributário pelo IET, em parceria com a PUC/RS. Atua no contencioso tributário administrativo e judicial, no planejamento tributário de empresas e patrimonial de seus sócios, bem como em questões societárias e fiscais relacionadas ao comércio exterior.",
-    photo: `${IMAGES}bruno-fiuza.jpg`,
+    photo: `${IMAGES}bruno_fiuza.jpg`,
   },
   {
     id: "alexandre-fogaca",
@@ -77,7 +77,7 @@ export const partners = [
     oab: "OAB/SP 000.000",
     role: "Sócio Fundador | Advogado",
     bio: "Advogado especialista em Direito Tributário e pós-graduando na PUC/RS. Atua na gestão e reestruturação de passivos fiscais, especialmente na negociação de dívidas por meio da transação tributária, além do contencioso tributário administrativo e judicial. Sua atuação também abrange questões relacionadas ao Direito Empresarial, Imobiliário e Processual Civil.",
-    photo: `${IMAGES}alexandre-fogaca.jpg`,
+    photo: `${IMAGES}alexandre_fogaca.jpg`,
   },
 ];
 
