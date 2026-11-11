@@ -1,12 +1,14 @@
 import Button from "../Button/Button.jsx";
 import Icon from "../Icon/Icon.jsx";
 import SectionHeader from "../SectionHeader/SectionHeader.jsx";
-import { WHATSAPP_NUMBER, contactInfo, interestAreas } from "../../data/site.js";
+import {
+  WHATSAPP_NUMBER,
+  contactInfo,
+  interestAreas,
+} from "../../data/site.js";
 import "./Contact.css";
 
 export default function Contact() {
-  // Monta a mensagem com todos os campos e abre o WhatsApp do escritório.
-  // O cliente ainda precisa apertar "enviar" dentro do WhatsApp.
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.currentTarget;
@@ -72,7 +74,7 @@ export default function Contact() {
 
               <div className="contact-form__field">
                 <label className="contact-form__label" htmlFor="contact-email">
-                  E-mail Profissional *
+                  E-mail *
                 </label>
                 <input
                   className="contact-form__control"
