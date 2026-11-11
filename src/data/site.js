@@ -75,7 +75,7 @@ export const partners = [
     photo: `${IMAGES}bruno_fiuza.jpg`,
     photoPosition: "50% 0%",
     photoZoom: 1.2,
-    photoOrigin: "50% 48%",
+    photoOrigin: "50% 20%",
   },
   {
     id: "alexandre-fogaca",
