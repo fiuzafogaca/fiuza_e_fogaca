@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import Icon from '../Icon/Icon.jsx';
 import SectionHeader from '../SectionHeader/SectionHeader.jsx';
 import { practiceAreas } from '../../data/site.js';
@@ -45,12 +45,46 @@ function AreaCard({ area }) {
 }
 
 export default function PracticeAreas() {
+  const gridRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return undefined;
+
+    const measure = () => {
+      let tallest = 0;
+      grid.querySelectorAll('.area-card').forEach((card) => {
+        const style = getComputedStyle(card);
+        const main = card.querySelector('.area-card__main');
+        const body = card.querySelector('.area-card__body');
+        const footer = card.querySelector('.area-card__footer');
+        const natural =
+          parseFloat(style.paddingTop) +
+          parseFloat(style.paddingBottom) +
+          parseFloat(style.borderTopWidth) +
+          parseFloat(style.borderBottomWidth) +
+          main.offsetHeight -
+          body.offsetHeight +
+          footer.offsetHeight;
+        tallest = Math.max(tallest, natural);
+      });
+      grid.style.setProperty('--area-card-min', `${Math.ceil(tallest)}px`);
+    };
+
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(grid);
+    document.fonts?.ready.then(measure);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="practice-areas" id="areas-atuacao">
       <div className="practice-areas__inner container">
         <SectionHeader title="Áreas de Atuação" />
 
-        <div className="practice-areas__grid">
+        <div className="practice-areas__grid" ref={gridRef}>
           {practiceAreas.map((area) => (
             <AreaCard key={area.id} area={area} />
           ))}

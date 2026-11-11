@@ -23,8 +23,10 @@
 .about__text {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: var(--space-lg);
   color: rgba(40, 51, 47, 0.85);
+  font-size: 18px;
+  line-height: 32px;
 }
 
 .about__strong {
@@ -45,8 +47,13 @@
     padding-block: 7rem;
   }
 
+  .about__text {
+    font-size: 21px;
+    line-height: 36px;
+  }
+
   .about__content {
-    width: calc(7 / 12 * 100%);
-    max-width: 58rem;
+    width: calc(8 / 12 * 100%);
+    max-width: 66rem;
   }
 }

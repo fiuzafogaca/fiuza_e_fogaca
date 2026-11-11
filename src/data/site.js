@@ -72,7 +72,8 @@ export const partners = [
     oab: "OAB/RS 137.391",
     role: "Sócio Fundador | Advogado",
     bio: "Advogado, pós-graduado em Direito e Processo Tributário pelo IET, em parceria com a PUC/RS. Atua no contencioso tributário administrativo e judicial, no planejamento tributário de empresas e patrimonial de seus sócios, bem como em questões societárias e fiscais relacionadas ao comércio exterior.",
-    photo: `${IMAGES}bruno_fiuza_card.jpg`,
+    photo: `${IMAGES}bruno_fiuza.jpg`,
+    photoPosition: "50% 0%",
   },
   {
     id: "alexandre-fogaca",
@@ -80,7 +81,8 @@ export const partners = [
     oab: "OAB/RS 140.715",
     role: "Sócio Fundador | Advogado",
     bio: "Advogado especialista em Direito Tributário e pós-graduando na PUC/RS. Atua na gestão e reestruturação de passivos fiscais, especialmente na negociação de dívidas por meio da transação tributária, além do contencioso tributário administrativo e judicial. Sua atuação também abrange questões relacionadas ao Direito Empresarial, Imobiliário e Processual Civil.",
-    photo: `${IMAGES}alexandre_fogaca_card.jpg`,
+    photo: `${IMAGES}alexandre_fogaca.jpg`,
+    photoPosition: "50% 65%",
   },
 ];
 
@@ -140,14 +142,10 @@ export const contactInfo = [
   },
 ];
 
-export const interestAreas = [
-  { value: "civil", label: "Direito Civil" },
-  { value: "empresarial", label: "Direito Empresarial" },
-  { value: "trabalhista", label: "Direito Trabalhista" },
-  { value: "previdenciario", label: "Direito Previdenciário" },
-  { value: "consumidor", label: "Direito do Consumidor" },
-  { value: "consultoria", label: "Consultoria Jurídica Geral" },
-];
+export const interestAreas = practiceAreas.map((area) => ({
+  value: area.id,
+  label: area.title,
+}));
 
 export const footerLinks = [
   { label: "Início", href: "#inicio" },

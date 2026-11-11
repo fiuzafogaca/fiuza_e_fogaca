@@ -10,6 +10,7 @@ function PartnerCard({ partner }) {
         <img
           className="partner-card__image"
           src={partner.photo}
+          style={{ objectPosition: partner.photoPosition }}
           alt={`${partner.name}, ${partner.role}`}
         />
         <div className="partner-card__shade" aria-hidden="true" />

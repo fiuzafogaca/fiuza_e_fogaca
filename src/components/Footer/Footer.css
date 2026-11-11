@@ -22,9 +22,9 @@
 }
 
 .footer__logo {
-  width: auto;
-  height: 3.25rem;
-  object-fit: contain;
+  width: 100%;
+  max-width: 40rem;
+  height: auto;
 }
 
 .footer__column {
@@ -114,10 +114,6 @@
 @media (min-width: 768px) {
   .footer__columns {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer__logo {
-    height: 4rem;
   }
 }
 

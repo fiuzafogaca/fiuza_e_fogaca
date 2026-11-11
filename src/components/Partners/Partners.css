@@ -141,7 +141,7 @@
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1536px) {
   .partners__grid {
     grid-template-columns: repeat(2, 1fr);
   }

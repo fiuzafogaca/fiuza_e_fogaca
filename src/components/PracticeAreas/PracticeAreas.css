@@ -14,14 +14,11 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--gutter);
-  align-items: stretch;
-}
-
-.practice-areas__grid:not(:has(.area-card--expanded)) {
-  grid-auto-rows: 1fr;
+  align-items: start;
 }
 
 .area-card {
+  min-height: var(--area-card-min, 0);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

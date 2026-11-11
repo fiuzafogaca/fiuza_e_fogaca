@@ -31,7 +31,7 @@
   --space-xl: 3.5rem;
   --gutter: 2rem;
   --margin-mobile: 1.5rem;
-  --margin: 3rem;
+  --margin: clamp(1.5rem, 5vw, 6rem);
 
   --container-max: 1920px;
   --header-height: 80px;
