@@ -5,8 +5,6 @@ import { WHATSAPP_NUMBER, contactInfo, interestAreas } from "../../data/site.js"
 import "./Contact.css";
 
 export default function Contact() {
-  // Monta a mensagem com todos os campos e abre o WhatsApp do escritório.
-  // O cliente ainda precisa apertar "enviar" dentro do WhatsApp.
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.currentTarget;
@@ -35,6 +33,7 @@ export default function Contact() {
       <div className="contact__inner container">
         <div className="contact__info">
           <SectionHeader
+            tone="light"
             eyebrow="Canal de Atendimento"
             title="Fale com um Especialista"
             lead="Apresente seu caso para uma avaliação inicial conduzida sob estrito sigilo profissional e rigor técnico."
@@ -145,7 +144,7 @@ export default function Contact() {
             </p>
 
             <div className="contact-form__submit">
-              <Button type="submit" icon="send" wide>
+              <Button type="submit" icon="send" variant="brown" wide>
                 Enviar Mensagem
               </Button>
             </div>

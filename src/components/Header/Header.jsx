@@ -8,7 +8,6 @@ const MENU_ID = "menu-mobile";
 export default function Header({ logoSlotRef }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Fecha o menu com Esc e quando a tela passa para o layout de desktop
   useEffect(() => {
     if (!menuOpen) return undefined;
 
@@ -40,14 +39,12 @@ export default function Header({ logoSlotRef }) {
     <>
       <header className="header">
         <div className="header__inner container">
-          {/* Espaço onde o logo "pousa" quando a página é rolada */}
           <div
             className="header__logo-slot"
             ref={logoSlotRef}
             aria-hidden="true"
           />
 
-          {/* Menu horizontal: só aparece no desktop */}
           <nav className="header__nav" aria-label="Navegação principal">
             {navLinks.map((link) => (
               <a key={link.href} className="header__link" href={link.href}>
@@ -56,7 +53,6 @@ export default function Header({ logoSlotRef }) {
             ))}
           </nav>
 
-          {/* Botão hambúrguer: só aparece quando o menu horizontal some */}
           <button
             className="header__toggle"
             type="button"
@@ -70,8 +66,6 @@ export default function Header({ logoSlotRef }) {
         </div>
       </header>
 
-      {/* Painel do menu mobile. Fica fora do <header> para ficar acima do logo,
-          que é fixo e tem z-index maior que o do header. */}
       <nav
         id={MENU_ID}
         className={mobileMenuClasses}

@@ -22,7 +22,6 @@ function AreaCard({ area }) {
         </div>
 
         <h3 className="area-card__title">{area.title}</h3>
-
         <div className="area-card__body">
           <div className="area-card__body-inner" id={bodyId}>
             <p className="area-card__text">{area.text}</p>

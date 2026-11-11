@@ -50,12 +50,7 @@ export default function Partners() {
   return (
     <section className="partners" id="socios">
       <div className="partners__inner container">
-        <SectionHeader
-          align="center"
-          eyebrow="Corpo Diretivo"
-          title="SÓCIOS"
-          lead="Profissionais comprometidos com a excelência jurídica e o atendimento personalizado."
-        />
+        <SectionHeader align="center" tone="gold" title="SÓCIOS" />
 
         <div className="partners__grid">
           {partners.map((partner) => (

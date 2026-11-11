@@ -6,12 +6,14 @@ export default function SectionHeader({
   lead,
   align = 'left',
   size = 'lg',
+  tone = 'default',
   className = '',
 }) {
   const classes = [
     'section-header',
     `section-header--${align}`,
     size === 'md' ? 'section-header--compact' : '',
+    tone !== 'default' ? `section-header--${tone}` : '',
     className,
   ]
     .filter(Boolean)

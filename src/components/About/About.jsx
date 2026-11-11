@@ -6,7 +6,6 @@ export default function About() {
       <div className="about__inner container">
         <div className="about__content">
           <h2 className="about__title">SOBRE NÓS</h2>
-
           <div className="about__text">
             <p>
               O escritório <strong className="about__strong">Fiuza &amp; Fogaça Advogados</strong>{' '}
@@ -23,11 +22,6 @@ export default function About() {
             </p>
             <p>Nosso objetivo é estabelecer relações de confiança e gerar valor para nossos clientes.</p>
           </div>
-
-          <blockquote className="about__quote">
-            "A verdadeira governança jurídica não apenas resolve litígios, mas constrói pilares de
-            perenidade para os negócios."
-          </blockquote>
         </div>
       </div>
     </section>

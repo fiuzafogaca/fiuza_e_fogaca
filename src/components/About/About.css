@@ -32,19 +32,6 @@
   font-weight: 600;
 }
 
-.about__quote {
-  margin-top: var(--space-sm);
-  padding-left: var(--space-md);
-  border-left: 2px solid var(--color-secondary-container);
-  color: var(--color-secondary-container);
-  font-family: var(--font-serif);
-  font-size: 20px;
-  font-style: italic;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: 0.01em;
-}
-
 @media (min-width: 768px) {
   .about__title {
     font-size: 48px;
@@ -58,9 +45,8 @@
     padding-block: 7rem;
   }
 
-  /* Coluna de texto ocupa 7 das 12 colunas, como no design original */
   .about__content {
     width: calc(7 / 12 * 100%);
-    max-width: 58rem; /* mantém linhas de texto confortáveis de ler em telas largas */
+    max-width: 58rem;
   }
 }
