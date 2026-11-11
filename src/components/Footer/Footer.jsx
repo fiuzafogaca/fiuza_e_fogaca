@@ -3,7 +3,6 @@ import {
   LOGO_URL,
   contactInfo,
   footerLinks,
-  footerLocation,
 } from "../../data/site.js";
 import "./Footer.css";
 
@@ -48,10 +47,6 @@ export default function Footer() {
                   <span>{item.value}</span>
                 </div>
               ))}
-              <div className="footer__contact">
-                <span className="footer__contact-label">Localização</span>
-                <span>{footerLocation}</span>
-              </div>
             </div>
           </div>
         </div>

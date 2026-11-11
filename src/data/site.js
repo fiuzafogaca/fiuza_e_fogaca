@@ -27,55 +27,13 @@ export const practiceAreas = [
     icon: "gavel",
     title: "Direito Tributário",
     text: "Atuamos no planejamento tributário a partir da realidade operacional de cada empresa, na análise dos impactos da Reforma Tributária e na identificação de oportunidades de otimização da carga fiscal. Também assessoramos empresas na negociação de débitos fiscais por meio da transação tributária, na defesa administrativa e judicial contra autuações e execuções fiscais e na recuperação de créditos tributários.",
-    topics: [
-      "Planejamento tributário",
-      "Transação tributária e transação PGFN",
-      "Parcelamento e desconto PGFN",
-      "Dívida ativa da União, Regularize e PGDAU",
-      "Revisão de CAPAG e capacidade de pagamento",
-      "Negociação de dívidas fiscais",
-      "Defesa em execução fiscal",
-      "Embargos à execução fiscal e exceção de pré-executividade",
-      "Prescrição, prescrição intercorrente e decadência",
-      "Penhora online, Sisbajud e bloqueio de conta",
-      "Redirecionamento da execução ao sócio",
-      "Certidão negativa (CND) e CPEN",
-      "Autuação fiscal e ação anulatória",
-      "Mandado de segurança",
-      "Reforma tributária: CBS, IBS, split payment, imposto seletivo e IVA dual",
-      "Simples Nacional, lucro presumido e lucro real",
-      "ICMS, PIS e Cofins",
-      "Tributação de dividendos e juros sobre capital próprio",
-      "Recuperação de créditos tributários",
-    ],
   },
   {
     id: "empresarial",
     tag: "02 / SOCIETÁRIO",
     icon: "corporate_fare",
-    title: "Direito Empresarial e Societário",
+    title: "Direito Empresarial",
     text: "Assessoramos empresas na redação de contratos sociais, acordos de sócios e operações intracompany, além de contratos em geral, estruturação de operações e análise de riscos, privilegiando a prevenção de conflitos. Organizamos a relação entre sócios e damos segurança jurídica às decisões e aos negócios da empresa, evitando que o crescimento traga passivos silenciosos.",
-    topics: [
-      "Contrato social e alteração contratual",
-      "Sociedade limitada, sociedade limitada unipessoal e sociedade anônima",
-      "Sociedade em conta de participação",
-      "Acordo de sócios, acordo de quotistas e vesting",
-      "Saída e exclusão de sócio",
-      "Dissolução parcial e apuração de haveres",
-      "Dissolução de sociedade e encerramento de empresa",
-      "Cessão de quotas, capital social e integralização de capital",
-      "Fusão e aquisição (M&A), cisão e incorporação de empresas",
-      "Compra e venda de empresa, trespasse e due diligence",
-      "Valuation e memorando de entendimentos",
-      "Reorganização societária",
-      "Governança corporativa e compliance",
-      "Responsabilidade dos sócios e desconsideração da personalidade jurídica",
-      "Distribuição de dividendos e pró-labore",
-      "Contratos empresariais",
-      "Recuperação judicial, recuperação extrajudicial e falência",
-      "Abertura de empresa e Junta Comercial",
-      "Registro de marca",
-    ],
   },
   {
     id: "patrimonial",
@@ -83,16 +41,6 @@ export const practiceAreas = [
     icon: "badge",
     title: "Planejamento Patrimonial e Sucessório",
     text: "Estruturamos a organização e a proteção do patrimônio considerando os aspectos societários, tributários e sucessórios de cada família ou grupo. Atuamos na constituição de holdings, na reorganização de bens e participações e no planejamento da sucessão, preservando o patrimônio e evitando que sua transmissão gere desgaste familiar ou custo excessivo.",
-    topics: [
-      "Holding familiar e holding patrimonial",
-      "Planejamento patrimonial e planejamento sucessório",
-      "Sucessão familiar e empresa familiar",
-      "Blindagem e proteção patrimonial",
-      "Doação com reserva de usufruto",
-      "Testamento",
-      "ITCMD (ITCD)",
-      "Integralização de imóveis",
-    ],
   },
   {
     id: "aduaneiro",
@@ -100,12 +48,6 @@ export const practiceAreas = [
     icon: "health_and_safety",
     title: "Direito Aduaneiro",
     text: "Assessoramos operações de importação e exportação, com análise da tributação incidente, classificação fiscal, regimes aduaneiros especiais e benefícios aplicáveis. Atuamos também na defesa em autuações aduaneiras e nas exigências que afetam custos e regularidade no comércio exterior.",
-    topics: [
-      "Importação e exportação",
-      "Classificação fiscal",
-      "Regimes aduaneiros especiais",
-      "Defesa em autuações aduaneiras",
-    ],
   },
   {
     id: "imobiliario",
@@ -113,13 +55,6 @@ export const practiceAreas = [
     icon: "loyalty",
     title: "Direito Imobiliário",
     text: "Atuamos na elaboração e análise de contratos de compra e venda, locação e estruturação de negócios imobiliários, bem como na due diligence que antecede a aquisição, com o exame da situação registral do imóvel, de ônus reais e de eventuais passivos. Cuidamos também da regularização documental e registral, incluindo usucapião e retificação de registro.",
-    topics: [
-      "Compra e venda de imóveis",
-      "Usucapião",
-      "Due diligence imobiliária",
-      "Retificação de registro",
-      "Contratos de locação",
-    ],
   },
   {
     id: "consultoria",
@@ -127,13 +62,6 @@ export const practiceAreas = [
     icon: "insights",
     title: "Consultoria Jurídica",
     text: "Diagnóstico jurídico preventivo, pareceres técnicos, assessoria estratégica contínua e mitigação proativa de riscos legais.",
-    topics: [
-      "Direito civil",
-      "Contratos",
-      "Pareceres técnicos",
-      "Diagnóstico jurídico preventivo",
-      "Assessoria estratégica contínua",
-    ],
   },
 ];
 
@@ -218,8 +146,6 @@ export const interestAreas = practiceAreas.map((area) => ({
   value: area.id,
   label: area.title,
 }));
-
-export const footerLocation = "Canoas, RS | Atendimento em todo o Brasil";
 
 export const footerLinks = [
   { label: "Início", href: "#inicio" },
