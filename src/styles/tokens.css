@@ -1,5 +1,4 @@
 :root {
-  /* Cores (extraídas do design do Stitch) */
   --color-surface: #0b1513;
   --color-surface-lowest: #07100d;
   --color-surface-low: #141e1b;
@@ -22,25 +21,21 @@
   --color-paper-text: #28332f;
   --color-paper-strong: #141e1b;
 
-  /* Fontes */
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Plus Jakarta Sans', sans-serif;
 
-  /* Espaçamentos */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 2rem;
   --space-xl: 3.5rem;
   --gutter: 2rem;
-  --margin-mobile: 1.25rem;
-  --margin: 2rem;
+  --margin-mobile: 1.5rem;
+  --margin: 3rem;
 
-  /* Layout */
   --container-max: 1920px;
   --header-height: 80px;
 
-  /* Bordas e sombras */
   --radius: 0.25rem;
   --radius-lg: 0.5rem;
   --radius-xl: 0.75rem;
@@ -48,7 +43,6 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
 
-  /* Transições */
   --transition-fast: 200ms;
   --transition-base: 300ms;
 }

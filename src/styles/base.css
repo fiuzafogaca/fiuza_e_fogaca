@@ -56,7 +56,6 @@ textarea {
   color: inherit;
 }
 
-/* Bloco de layout reutilizável: limita a largura e aplica as margens laterais */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -70,12 +69,10 @@ textarea {
   }
 }
 
-/* Âncoras não ficam escondidas atrás do header fixo */
 [id] {
   scroll-margin-top: var(--header-height);
 }
 
-/* Barra de rolagem */
 ::-webkit-scrollbar {
   width: 8px;
 }

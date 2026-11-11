@@ -33,6 +33,16 @@
   background: var(--color-secondary-fixed);
 }
 
+.button--brown {
+  background: var(--color-secondary-container);
+  color: var(--color-paper);
+  box-shadow: var(--shadow-md);
+}
+
+.button--brown:hover {
+  background: #6b5230;
+}
+
 .button--ghost {
   background: rgba(34, 44, 41, 0.4);
   color: var(--color-on-surface);

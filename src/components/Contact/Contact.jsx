@@ -37,6 +37,7 @@ export default function Contact() {
       <div className="contact__inner container">
         <div className="contact__info">
           <SectionHeader
+            tone="light"
             eyebrow="Canal de Atendimento"
             title="Fale com um Especialista"
             lead="Apresente seu caso para uma avaliação inicial conduzida sob estrito sigilo profissional e rigor técnico."
@@ -147,7 +148,7 @@ export default function Contact() {
             </p>
 
             <div className="contact-form__submit">
-              <Button type="submit" icon="send" wide>
+              <Button type="submit" icon="send" variant="brown" wide>
                 Enviar Mensagem
               </Button>
             </div>

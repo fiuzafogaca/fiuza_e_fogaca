@@ -14,10 +14,12 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--gutter);
-  align-items: start;
+  align-items: stretch;
 }
 
-/* ---------- Card ---------- */
+.practice-areas__grid:not(:has(.area-card--expanded)) {
+  grid-auto-rows: 1fr;
+}
 
 .area-card {
   display: flex;
@@ -97,7 +99,6 @@
   line-height: 32px;
 }
 
-/* Abre e fecha animando de 0fr para 1fr */
 .area-card__body {
   display: grid;
   grid-template-rows: 0fr;

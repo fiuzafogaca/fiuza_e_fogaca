@@ -1,4 +1,4 @@
-// Número que recebe as mensagens do formulário (só dígitos: 55 + DDD + número)
+
 export const WHATSAPP_NUMBER = "5551984324164";
 
 export const FIRM_NAME = "Fiuza & Fogaça Advogados";
@@ -72,7 +72,7 @@ export const partners = [
     oab: "OAB/RS 137.391",
     role: "Sócio Fundador | Advogado",
     bio: "Advogado, pós-graduado em Direito e Processo Tributário pelo IET, em parceria com a PUC/RS. Atua no contencioso tributário administrativo e judicial, no planejamento tributário de empresas e patrimonial de seus sócios, bem como em questões societárias e fiscais relacionadas ao comércio exterior.",
-    photo: `${IMAGES}bruno_fiuza.jpg`,
+    photo: `${IMAGES}bruno_fiuza_card.jpg`,
   },
   {
     id: "alexandre-fogaca",
@@ -80,7 +80,7 @@ export const partners = [
     oab: "OAB/RS 140.715",
     role: "Sócio Fundador | Advogado",
     bio: "Advogado especialista em Direito Tributário e pós-graduando na PUC/RS. Atua na gestão e reestruturação de passivos fiscais, especialmente na negociação de dívidas por meio da transação tributária, além do contencioso tributário administrativo e judicial. Sua atuação também abrange questões relacionadas ao Direito Empresarial, Imobiliário e Processual Civil.",
-    photo: `${IMAGES}alexandre_fogaca.jpg`,
+    photo: `${IMAGES}alexandre_fogaca_card.jpg`,
   },
 ];
 
@@ -125,13 +125,6 @@ export const differentials = [
 
 export const contactInfo = [
   {
-    id: "endereco",
-    icon: "location_on",
-    label: "Endereço Corporativo",
-    shortLabel: "Endereço",
-    value: "Rua Brasil, 1375, Torre A, Sala 802 - Centro, CEP 92310-150",
-  },
-  {
     id: "telefone",
     icon: "call",
     label: "Telefone / WhatsApp",
@@ -144,12 +137,6 @@ export const contactInfo = [
     label: "E-mail Institucional",
     shortLabel: "E-mail",
     value: "escritorio@fiuzaefogaca.com",
-  },
-  {
-    id: "horario",
-    icon: "schedule",
-    label: "Horário de Atendimento",
-    value: "Segunda a Sexta-feira, das 09h às 18h",
   },
 ];
 

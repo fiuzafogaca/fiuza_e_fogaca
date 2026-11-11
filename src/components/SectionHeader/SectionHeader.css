@@ -66,3 +66,16 @@
     letter-spacing: -0.01em;
   }
 }
+
+.section-header--gold .section-header__title {
+  color: var(--color-secondary);
+}
+
+.section-header--light .section-header__eyebrow,
+.section-header--light .section-header__title {
+  color: var(--color-secondary-container);
+}
+
+.section-header--light .section-header__lead {
+  color: rgba(40, 51, 47, 0.85);
+}

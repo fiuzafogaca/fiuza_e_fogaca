@@ -16,8 +16,6 @@
   gap: var(--gutter);
 }
 
-/* ---------- Card ---------- */
-
 .partner-card {
   display: flex;
   flex-direction: column;
@@ -31,7 +29,7 @@
   position: relative;
   flex-shrink: 0;
   width: 100%;
-  height: 20rem;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   background: var(--color-surface-highest);
 }
@@ -50,7 +48,6 @@
   filter: grayscale(0%);
 }
 
-/* Degradê só aparece no mobile, quando a foto fica acima do texto */
 .partner-card__shade {
   position: absolute;
   inset: 0;
@@ -129,6 +126,7 @@
 
   .partner-card__photo {
     width: calc(5 / 12 * 100%);
+    max-width: 24rem;
     height: auto;
   }
 
@@ -141,7 +139,9 @@
   .partners {
     padding-block: 7rem;
   }
+}
 
+@media (min-width: 1280px) {
   .partners__grid {
     grid-template-columns: repeat(2, 1fr);
   }

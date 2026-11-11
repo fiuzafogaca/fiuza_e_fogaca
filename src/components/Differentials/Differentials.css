@@ -15,8 +15,6 @@
   align-items: start;
 }
 
-/* ---------- Card ---------- */
-
 .differential-card {
   display: flex;
   flex-direction: column;
@@ -39,7 +37,6 @@
   box-shadow: 0 0 0 1px rgba(224, 194, 152, 0.4), var(--shadow-md);
 }
 
-/* O card inteiro é clicável: o botão se estende por cima da área do cabeçalho */
 .differential-card__trigger {
   display: flex;
   flex-direction: column;
@@ -134,7 +131,6 @@
   }
 }
 
-/* 4 colunas só quando há espaço; antes disso 2 colunas deixam o texto mais largo */
 @media (min-width: 1280px) {
   .differentials__grid {
     grid-template-columns: repeat(4, 1fr);

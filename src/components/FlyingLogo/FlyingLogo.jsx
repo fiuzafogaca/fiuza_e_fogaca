@@ -2,13 +2,8 @@ import { useLayoutEffect, useRef } from 'react';
 import { FIRM_NAME } from '../../data/site.js';
 import './FlyingLogo.css';
 
-// Distância de scroll (px) em que o logo termina de ir do Hero para o Header
 const MAX_SCROLL = 260;
 
-/**
- * Um único logo com position: fixed. A cada scroll ele é interpolado entre
- * a posição/tamanho do slot do Hero e a posição/tamanho do slot do Header.
- */
 export default function FlyingLogo({ src, heroSlotRef, headerSlotRef }) {
   const linkRef = useRef(null);
 
@@ -41,7 +36,7 @@ export default function FlyingLogo({ src, heroSlotRef, headerSlotRef }) {
     window.addEventListener('scroll', requestUpdate, { passive: true });
     window.addEventListener('resize', requestUpdate, { passive: true });
     window.addEventListener('load', requestUpdate);
-    // As fontes mudam o tamanho do layout quando carregam
+
     document.fonts?.ready.then(requestUpdate);
 
     return () => {

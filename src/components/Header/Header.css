@@ -26,8 +26,6 @@
   height: 2.5rem;
 }
 
-/* ---------- Menu horizontal (desktop) ---------- */
-
 .header__nav {
   display: none;
   align-items: center;
@@ -48,8 +46,6 @@
 .header__link:hover {
   color: var(--color-secondary);
 }
-
-/* ---------- Botão hambúrguer ---------- */
 
 .header__toggle {
   display: inline-flex;
@@ -76,9 +72,6 @@
   outline: 2px solid var(--color-secondary);
   outline-offset: 2px;
 }
-
-/* ---------- Painel do menu mobile ----------
-   z-index 70: acima do logo fixo (60), senão o logo cobre os links. */
 
 .mobile-menu {
   position: fixed;

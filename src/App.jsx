@@ -8,10 +8,10 @@ import Partners from './components/Partners/Partners.jsx';
 import Differentials from './components/Differentials/Differentials.jsx';
 import Contact from './components/Contact/Contact.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton.jsx';
 import { LOGO_URL } from './data/site.js';
 
 export default function App() {
-  // O logo "voa" do slot do Hero até o slot do Header conforme o scroll.
   const heroLogoSlotRef = useRef(null);
   const headerLogoSlotRef = useRef(null);
 
@@ -32,6 +32,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }
