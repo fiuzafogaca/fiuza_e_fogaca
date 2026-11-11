@@ -5,7 +5,7 @@ export default function About() {
     <section className="about" id="escritorio">
       <div className="about__inner container">
         <div className="about__content">
-          <h2 className="about__title">SOBRE NÓS</h2>
+          <h2 className="about__title">Sobre nós</h2>
           <div className="about__text">
             <p>
               O escritório <strong className="about__strong">Fiuza &amp; Fogaça Advogados</strong>{' '}

@@ -74,6 +74,8 @@ export const partners = [
     bio: "Advogado, pós-graduado em Direito e Processo Tributário pelo IET, em parceria com a PUC/RS. Atua no contencioso tributário administrativo e judicial, no planejamento tributário de empresas e patrimonial de seus sócios, bem como em questões societárias e fiscais relacionadas ao comércio exterior.",
     photo: `${IMAGES}bruno_fiuza.jpg`,
     photoPosition: "50% 0%",
+    photoZoom: 1.2,
+    photoOrigin: "50% 48%",
   },
   {
     id: "alexandre-fogaca",

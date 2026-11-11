@@ -40,11 +40,13 @@
   object-fit: cover;
   object-position: top;
   filter: grayscale(100%);
+  transform: scale(var(--photo-zoom, 1));
+  transform-origin: var(--photo-origin, 50% 50%);
   transition: transform 500ms, filter 500ms;
 }
 
 .partner-card:hover .partner-card__image {
-  transform: scale(1.05);
+  transform: scale(calc(var(--photo-zoom, 1) * 1.05));
   filter: grayscale(0%);
 }
 

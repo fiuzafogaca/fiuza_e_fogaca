@@ -10,7 +10,11 @@ function PartnerCard({ partner }) {
         <img
           className="partner-card__image"
           src={partner.photo}
-          style={{ objectPosition: partner.photoPosition }}
+          style={{
+            objectPosition: partner.photoPosition,
+            "--photo-zoom": partner.photoZoom,
+            "--photo-origin": partner.photoOrigin,
+          }}
           alt={`${partner.name}, advogado e sócio fundador do escritório Fiuza & Fogaça Advogados`}
         />
         <div className="partner-card__shade" aria-hidden="true" />
@@ -51,7 +55,7 @@ export default function Partners() {
   return (
     <section className="partners" id="socios">
       <div className="partners__inner container">
-        <SectionHeader align="center" tone="gold" title="SÓCIOS" />
+        <SectionHeader align="center" tone="gold" title="Sócios" />
 
         <div className="partners__grid">
           {partners.map((partner) => (

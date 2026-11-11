@@ -19,8 +19,6 @@ export default function Contact() {
       "*Novo contato pelo site*",
       "",
       `*Nome:* ${data.get("name")}`,
-      `*E-mail:* ${data.get("email")}`,
-      `*Telefone:* ${data.get("phone")}`,
       `*Área de interesse:* ${area ? area.label : data.get("area")}`,
       "",
       "*Mensagem:*",
@@ -72,37 +70,6 @@ export default function Contact() {
                   required
                 />
               </div>
-
-              <div className="contact-form__field">
-                <label className="contact-form__label" htmlFor="contact-email">
-                  E-mail *
-                </label>
-                <input
-                  className="contact-form__control"
-                  id="contact-email"
-                  name="email"
-                  type="email"
-                  placeholder="Ex: joao@empresa.com.br"
-                  required
-                />
-              </div>
-            </div>
-
-            <div className="contact-form__row">
-              <div className="contact-form__field">
-                <label className="contact-form__label" htmlFor="contact-phone">
-                  Telefone / WhatsApp *
-                </label>
-                <input
-                  className="contact-form__control"
-                  id="contact-phone"
-                  name="phone"
-                  type="tel"
-                  placeholder="(11) 90000-0000"
-                  required
-                />
-              </div>
-
               <div className="contact-form__field">
                 <label className="contact-form__label" htmlFor="contact-area">
                   Área de Interesse
