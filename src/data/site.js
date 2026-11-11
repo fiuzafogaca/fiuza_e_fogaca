@@ -82,7 +82,7 @@ export const partners = [
     role: "Sócio Fundador | Advogado",
     bio: "Advogado especialista em Direito Tributário e pós-graduando na PUC/RS. Atua na gestão e reestruturação de passivos fiscais, especialmente na negociação de dívidas por meio da transação tributária, além do contencioso tributário administrativo e judicial. Sua atuação também abrange questões relacionadas ao Direito Empresarial, Imobiliário e Processual Civil.",
     photo: `${IMAGES}alexandre_fogaca.jpg`,
-    photoPosition: "50% 78%",
+    photoPosition: "50% 85%",
   },
 ];
 
