@@ -8,6 +8,10 @@ export default function Hero({ logoSlotRef }) {
       <div className="hero__glow" aria-hidden="true" />
 
       <div className="hero__inner container">
+        <h1 className="visually-hidden">
+          Fiuza &amp; Fogaça Advogados: escritório de advocacia tributária e
+          empresarial em Canoas, RS
+        </h1>
         <div className="hero__logo-slot" ref={logoSlotRef} aria-hidden="true" />
 
         <p className="hero__subtitle">{hero.subtitle}</p>

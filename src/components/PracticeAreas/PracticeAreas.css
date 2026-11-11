@@ -122,6 +122,23 @@
   color: var(--color-on-surface-variant);
 }
 
+.area-card__topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  padding-top: var(--space-md);
+}
+
+.area-card__topic {
+  padding: 0.25rem 0.625rem;
+  border: 1px solid rgba(224, 194, 152, 0.25);
+  border-radius: 9999px;
+  background: rgba(224, 194, 152, 0.06);
+  color: var(--color-on-surface-variant);
+  font-size: 12px;
+  line-height: 18px;
+}
+
 .area-card__footer {
   display: flex;
   align-items: center;

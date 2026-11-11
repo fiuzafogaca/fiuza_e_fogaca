@@ -11,7 +11,7 @@ function PartnerCard({ partner }) {
           className="partner-card__image"
           src={partner.photo}
           style={{ objectPosition: partner.photoPosition }}
-          alt={`${partner.name}, ${partner.role}`}
+          alt={`${partner.name}, advogado e sócio fundador do escritório Fiuza & Fogaça Advogados`}
         />
         <div className="partner-card__shade" aria-hidden="true" />
       </div>

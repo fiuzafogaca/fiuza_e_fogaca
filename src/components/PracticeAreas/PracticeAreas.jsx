@@ -25,6 +25,15 @@ function AreaCard({ area }) {
         <div className="area-card__body">
           <div className="area-card__body-inner" id={bodyId}>
             <p className="area-card__text">{area.text}</p>
+            {area.topics?.length > 0 && (
+              <ul className="area-card__topics" aria-label="Principais temas">
+                {area.topics.map((topic) => (
+                  <li key={topic} className="area-card__topic">
+                    {topic}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </div>
