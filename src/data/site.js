@@ -91,7 +91,7 @@ export const partners = [
 export const differentials = [
   {
     id: "atendimento",
-    icon: "handshake",
+    image: `${IMAGES}diferencial_atendimento.jpg`,
     title: "Atendimento Personalizado",
     text: [
       "Entendemos que decisões empresariais e patrimoniais exigem respostas ágeis e precisão técnica. Por isso, no Fiuza & Fogaça Advogados, a condução do seu caso é realizada diretamente pelos sócios, sem intermediários.",
@@ -100,7 +100,7 @@ export const differentials = [
   },
   {
     id: "nacional",
-    icon: "public",
+    image: `${IMAGES}diferencial_nacional.jpg`,
     title: "Atuação Nacional",
     text: [
       "O Fiuza & Fogaça Advogados atua em todo o território nacional, representando empresas em demandas judiciais e administrativas perante tribunais e órgãos públicos de diferentes esferas.",
@@ -109,7 +109,7 @@ export const differentials = [
   },
   {
     id: "resultados",
-    icon: "military_tech",
+    image: `${IMAGES}diferencial_resultados.jpg`,
     title: "Compromisso com Resultados",
     text: [
       "Não medimos eficiência por volume de relatórios, mas pelo retorno financeiro e pela segurança criada para o seu negócio. Nossa atuação é orientada para solucionar litígios de forma ágil, recuperar ativos e gerar economia efetiva.",
@@ -118,7 +118,7 @@ export const differentials = [
   },
   {
     id: "etica",
-    icon: "security",
+    image: `${IMAGES}diferencial_etica.jpg`,
     title: "Ética e Transparência",
     text: [
       "Pautamos nossa atuação pela honestidade intelectual: recusamos a lógica de aceitar causas por volume. Só ingressamos em uma demanda após uma avaliação criteriosa que confirme a viabilidade de entregar um resultado efetivo para a sua empresa.",

@@ -1,66 +1,114 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Icon from '../Icon/Icon.jsx';
-import SectionHeader from '../SectionHeader/SectionHeader.jsx';
 import { differentials } from '../../data/site.js';
 import './Differentials.css';
 
-function DifferentialCard({ item }) {
-  const [expanded, setExpanded] = useState(false);
-  const bodyId = `differential-${item.id}`;
-
-  const classes = ['differential-card', expanded ? 'differential-card--expanded' : '']
-    .filter(Boolean)
-    .join(' ');
-
-  return (
-    <article className={classes}>
-      <button
-        className="differential-card__trigger"
-        type="button"
-        aria-expanded={expanded}
-        aria-controls={bodyId}
-        onClick={() => setExpanded((open) => !open)}
-      >
-        <span className="differential-card__top">
-          <span className="differential-card__badge">
-            <Icon name={item.icon} size="28" />
-          </span>
-          <Icon name="add" size="22" className="differential-card__indicator" />
-        </span>
-
-        <span className="differential-card__title">{item.title}</span>
-      </button>
-
-      <div className="differential-card__body">
-        <div className="differential-card__body-inner" id={bodyId}>
-          {item.text.map((paragraph) => (
-            <p key={paragraph} className="differential-card__text">
-              {paragraph}
-            </p>
-          ))}
-        </div>
-      </div>
-    </article>
-  );
-}
+const AUTOPLAY_MS = 8000;
+const SWIPE_THRESHOLD = 50;
 
 export default function Differentials() {
-  return (
-    <section className="differentials">
-      <div className="differentials__inner container">
-        <SectionHeader
-          align="center"
-          size="md"
-          className="differentials__header"
-          eyebrow="Valores Fundamentais"
-          title="Diferenciais que definem nossa atuação"
-        />
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const touchStartX = useRef(null);
+  const total = differentials.length;
 
-        <div className="differentials__grid">
-          {differentials.map((item) => (
-            <DifferentialCard key={item.id} item={item} />
-          ))}
-        </div>
+  const goTo = (next) => setIndex((next + total) % total);
+
+  useEffect(() => {
+    if (paused) return undefined;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return undefined;
+    }
+
+    const timer = setTimeout(() => {
+      setIndex((current) => (current + 1) % total);
+    }, AUTOPLAY_MS);
+
+    return () => clearTimeout(timer);
+  }, [index, paused, total]);
+
+  const handleTouchStart = (event) => {
+    touchStartX.current = event.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (event) => {
+    if (touchStartX.current === null) return;
+    const delta = event.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(delta) < SWIPE_THRESHOLD) return;
+    goTo(delta < 0 ? index + 1 : index - 1);
+  };
+
+  return (
+    <section
+      className="differentials"
+      aria-roledescription="carrossel"
+      aria-label="Diferenciais do escritório"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
+      <div
+        className="differentials__track"
+        style={{ transform: `translateX(-${index * 100}%)` }}
+        aria-live={paused ? 'polite' : 'off'}
+      >
+        {differentials.map((item, position) => (
+          <article
+            key={item.id}
+            className="differentials__slide"
+            style={item.image ? { backgroundImage: `url(${item.image})` } : undefined}
+            aria-roledescription="slide"
+            aria-label={`${position + 1} de ${total}`}
+            aria-hidden={position !== index}
+          >
+            <div className="differentials__content">
+              <h2 className="differentials__title">{item.title}</h2>
+              <div className="differentials__text">
+                {item.text.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <button
+        className="differentials__arrow differentials__arrow--prev"
+        type="button"
+        aria-label="Diferencial anterior"
+        onClick={() => goTo(index - 1)}
+      >
+        <Icon name="chevron_left" size="32" />
+      </button>
+      <button
+        className="differentials__arrow differentials__arrow--next"
+        type="button"
+        aria-label="Próximo diferencial"
+        onClick={() => goTo(index + 1)}
+      >
+        <Icon name="chevron_right" size="32" />
+      </button>
+
+      <div className="differentials__dots">
+        {differentials.map((item, position) => (
+          <button
+            key={item.id}
+            className={
+              position === index
+                ? 'differentials__dot differentials__dot--active'
+                : 'differentials__dot'
+            }
+            type="button"
+            aria-label={`Ir para ${item.title}`}
+            aria-current={position === index}
+            onClick={() => goTo(position)}
+          />
+        ))}
       </div>
     </section>
   );
