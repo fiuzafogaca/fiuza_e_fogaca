@@ -9,7 +9,7 @@ const domain = existsSync(cnamePath) ? readFileSync(cnamePath, "utf8").trim() : 
 const base = domain ? "/" : "/fiuza_e_fogaca/";
 const siteUrl = domain
   ? `https://${domain}`
-  : "https://omacieljoao.github.io/fiuza_e_fogaca";
+  : "https://fiuzafogaca.github.io/fiuza_e_fogaca";
 
 function seoFiles() {
   return {
