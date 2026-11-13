@@ -134,6 +134,9 @@ export const contactInfo = [
     label: "Telefone / WhatsApp",
     shortLabel: "Telefone",
     value: "+55 (51) 98432-4164",
+    href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Olá! Gostaria de falar com o ${FIRM_NAME}.`)}`,
+    ariaLabel: "Falar com o escritório pelo WhatsApp em uma nova aba",
+    external: true,
   },
   {
     id: "email",
@@ -141,6 +144,8 @@ export const contactInfo = [
     label: "E-mail Institucional",
     shortLabel: "E-mail",
     value: "escritorio@fiuzaefogaca.com",
+    href: "mailto:escritorio@fiuzaefogaca.com",
+    ariaLabel: "Enviar e-mail para escritorio@fiuzaefogaca.com",
   },
   {
     id: "instagram",
@@ -149,6 +154,8 @@ export const contactInfo = [
     shortLabel: "Instagram",
     value: "@fiuzaefogaca",
     href: "https://www.instagram.com/fiuzaefogaca/",
+    ariaLabel: "Abrir o Instagram @fiuzaefogaca em uma nova aba",
+    external: true,
   },
 ];
 

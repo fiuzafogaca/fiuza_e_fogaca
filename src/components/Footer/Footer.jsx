@@ -48,9 +48,10 @@ export default function Footer() {
                     <a
                       className="footer__contact-link"
                       href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`Abrir o Instagram ${item.value} em uma nova aba`}
+                      {...(item.external
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
+                      aria-label={item.ariaLabel}
                     >
                       {item.value}
                     </a>

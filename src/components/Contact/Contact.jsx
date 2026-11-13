@@ -56,9 +56,10 @@ export default function Contact() {
                     <a
                       className="contact__item-value contact__item-value--link"
                       href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`Abrir o Instagram ${item.value} em uma nova aba`}
+                      {...(item.external
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
+                      aria-label={item.ariaLabel}
                     >
                       {item.value}
                     </a>
