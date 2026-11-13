@@ -146,6 +146,7 @@ export const contactInfo = [
     id: "instagram",
     icon: "instagram",
     label: "Instagram",
+    shortLabel: "Instagram",
     value: "@fiuzaefogaca",
     href: "https://www.instagram.com/fiuzaefogaca/",
   },

@@ -70,6 +70,16 @@
   padding-top: var(--space-xs);
 }
 
+.footer__contact-link {
+  width: fit-content;
+  transition: color var(--transition-fast);
+}
+
+.footer__contact-link:hover,
+.footer__contact-link:focus-visible {
+  color: var(--color-secondary);
+}
+
 .footer__contact-label {
   color: var(--color-on-surface);
   font-size: 11px;

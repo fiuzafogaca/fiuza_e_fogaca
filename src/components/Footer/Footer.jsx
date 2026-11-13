@@ -44,7 +44,19 @@ export default function Footer() {
                   <span className="footer__contact-label">
                     {item.shortLabel}
                   </span>
-                  <span>{item.value}</span>
+                  {item.href ? (
+                    <a
+                      className="footer__contact-link"
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Abrir o Instagram ${item.value} em uma nova aba`}
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <span>{item.value}</span>
+                  )}
                 </div>
               ))}
             </div>
