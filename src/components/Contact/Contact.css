@@ -57,6 +57,17 @@
   color: rgba(40, 51, 47, 0.85);
 }
 
+.contact__item-value--link {
+  width: fit-content;
+  transition: color var(--transition-fast);
+}
+
+.contact__item-value--link:hover,
+.contact__item-value--link:focus-visible {
+  color: var(--color-secondary-container);
+  text-decoration: underline;
+}
+
 .contact__panel {
   padding: var(--space-lg);
   border: 1px solid rgba(88, 67, 35, 0.12);

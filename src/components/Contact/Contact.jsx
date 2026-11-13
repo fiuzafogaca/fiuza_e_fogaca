@@ -1,5 +1,6 @@
 import Button from "../Button/Button.jsx";
 import Icon from "../Icon/Icon.jsx";
+import InstagramIcon from "../Icon/InstagramIcon.jsx";
 import SectionHeader from "../SectionHeader/SectionHeader.jsx";
 import {
   WHATSAPP_NUMBER,
@@ -44,10 +45,26 @@ export default function Contact() {
           <ul className="contact__list">
             {contactInfo.map((item) => (
               <li key={item.id} className="contact__item">
-                <Icon name={item.icon} className="contact__item-icon" />
+                {item.icon === "instagram" ? (
+                  <InstagramIcon className="contact__item-icon" />
+                ) : (
+                  <Icon name={item.icon} className="contact__item-icon" />
+                )}
                 <div className="contact__item-text">
                   <span className="contact__item-label">{item.label}</span>
-                  <span className="contact__item-value">{item.value}</span>
+                  {item.href ? (
+                    <a
+                      className="contact__item-value contact__item-value--link"
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Abrir o Instagram ${item.value} em uma nova aba`}
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <span className="contact__item-value">{item.value}</span>
+                  )}
                 </div>
               </li>
             ))}

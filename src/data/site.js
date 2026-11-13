@@ -142,6 +142,13 @@ export const contactInfo = [
     shortLabel: "E-mail",
     value: "escritorio@fiuzaefogaca.com",
   },
+  {
+    id: "instagram",
+    icon: "instagram",
+    label: "Instagram",
+    value: "@fiuzaefogaca",
+    href: "https://www.instagram.com/fiuzaefogaca/",
+  },
 ];
 
 export const interestAreas = practiceAreas.map((area) => ({
@@ -155,6 +162,4 @@ export const footerLinks = [
   { label: "Áreas de Atuação", href: "#areas-atuacao" },
   { label: "Equipe", href: "#socios" },
   { label: "Contato", href: "#contato" },
-  { label: "Política de Privacidade", href: "#contato" },
-  { label: "Termos de Uso", href: "#contato" },
 ];
