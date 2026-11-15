@@ -1,4 +1,3 @@
-
 export const WHATSAPP_NUMBER = "5551984324164";
 
 export const FIRM_NAME = "Fiuza & Fogaça Advogados";
@@ -75,7 +74,7 @@ export const partners = [
     photo: `${IMAGES}bruno_fiuza.jpg`,
     photoPosition: "50% 0%",
     photoZoom: 1.2,
-    photoOrigin: "50% 8%",
+    photoOrigin: "50% 48%",
   },
   {
     id: "alexandre-fogaca",
@@ -84,7 +83,7 @@ export const partners = [
     role: "Sócio Fundador | Advogado",
     bio: "Advogado especialista em Direito Tributário e pós-graduando na PUC/RS. Atua na gestão e reestruturação de passivos fiscais, especialmente na negociação de dívidas por meio da transação tributária, além do contencioso tributário administrativo e judicial. Sua atuação também abrange questões relacionadas ao Direito Empresarial, Imobiliário e Processual Civil.",
     photo: `${IMAGES}alexandre_fogaca.jpg`,
-    photoPosition: "50% 85%",
+    photoPosition: "50% 75%",
   },
 ];
 
